@@ -8,15 +8,15 @@ Config = {
 	Debug = false, -- Enable to add debug boxes and message.
 	img = "qb-inventory/html/images/", -- Set this to your inventory
 	JimMenu = true, -- Enable this if you are using an updated qb-menu resource with icon support
-	ApGov = false, -- Add support for AP-Goverment Tax 
+	ApGov = true, -- Add support for AP-Goverment Tax 
 	Peds = true, -- Set to true if you want Shops to have Peds
 	Limit = true, -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 	MaxSlots = 41, -- Set this to your player inventory slot count, this is default "41"
-	BlackMarket = false, -- enable to add blackmarket locations (defined at the bottom of this file)
+	BlackMarket = true, -- enable to add blackmarket locations (defined at the bottom of this file)
 	Measurement = "kg", -- Custom Weight measurement
-	Gabz247 = false,  -- Enable if using gabz 247 stores
-	GabzAmmu = false, -- Enable if using gabz Ammunation stores
-	VendOverride = false, -- Enable this if you want all the vending machines to use this script
+	Gabz247 = true,  -- Enable if using gabz 247 stores
+	GabzAmmu = true, -- Enable if using gabz Ammunation stores
+	VendOverride = true, -- Enable this if you want all the vending machines to use this script
 	RandomAmount = true, -- Sets wether a stash should have a "random" amount of stock or full.
 
 	Scenarios = { -- List of scenarios the peds do, This is called "fun", much better than standing staring at the void.
@@ -41,26 +41,25 @@ Config = {
 			{ name = "sandwich", price = 2, amount = 50, },
 			{ name = "beer", price = 7, amount = 50, },
 			{ name = "whiskey", price = 10, amount = 50, },
-			{ name = "vodka", price = 70000, amount = 50, },
+			{ name = "vodka", price = 12, amount = 50, },
 			{ name = "bandage", price = 100, amount = 50, },
 			{ name = "lighter", price = 2, amount = 50, },
 			{ name = "rolling_paper", price = 2, amount = 5000,  },
+			{ name = "lotto", price = 250, amount = 50, },
+			{ name = "notepad", price = 100, amount = 5000,  },
 		},
 		["bar"] = {
 			{ name = "water_bottle", price = 2, amount = 50, },
 			{ name = "beer", price = 7, amount = 50, },
 			{ name = "whiskey", price = 10, amount = 50, },
-			{ name = "vodka", price = 70000, amount = 50, },
+			{ name = "vodka", price = 12, amount = 50, },
 		},
 		["hardware"] = {
-			{ name = "lockpick", price = 200, amount = 50, },
 			{ name = "weapon_wrench", price = 250, amount = 250, },
 			{ name = "weapon_hammer", price = 250, amount = 250, },
-			{ name = "weapon_bat", price = 500, amount = 50,  requiredGang = { "lostmc" } },  -- Gang only options in stores
-			{ name = "repairkit", price = 250, amount = 50,  requiredJob = { ["mechanic"] = 0, ["police"] = 0 } },
 			{ name = "screwdriverset", price = 350, amount = 50, },
-			{ name = "phone", price = 850, amount = 50, },
-			{ name = "radio", price = 250, amount = 50, },
+			{ name = "phone", price = 750, amount = 50, },
+			{ name = "radio", price = 2500, amount = 50, },
 			{ name = "binoculars", price = 50, amount = 50, },
 			{ name = "firework1", price = 50, amount = 50, },
 			{ name = "firework2", price = 50, amount = 50, },
@@ -68,32 +67,71 @@ Config = {
 			{ name = "firework4", price = 50, amount = 50, },
 			{ name = "fitbit", price = 400, amount = 150, },
 			{ name = "cleaningkit", price = 150, amount = 150, },
-			{ name = "advancedrepairkit", price = 500, amount = 50,  requiredJob = { ["mechanic"] = 0 } },
+			{ name = "amonia", price = 20, amount = 15, },
+		},
+		["masker"] = {
+			{ name = "terror", price = 500, amount = 250, },
+			{ name = "hockeymask", price = 500, amount = 250, },
+			{ name = "blackbandana", price = 500, amount = 50, },
+			{ name = "tshirtmask", price = 500, amount = 50, },
+			{ name = "scarecrowmask", price = 500, amount = 50, },
+			{ name = "scarf", price = 500, amount = 50, },
+			{ name = "monkeymask", price = 500, amount = 50, },
+			{ name = "skullmask", price = 500, amount = 50, },
+			{ name = "terrorwit", price = 500, amount = 50, },
+			{ name = "feest", price = 500, amount = 50, },
+			{ name = "noselong", price = 500, amount = 150, },
+			{ name = "blauw", price = 500, amount = 150, },
+			{ name = "skullzwart", price = 500, amount = 250, },
+			{ name = "silver", price = 500, amount = 250, },
+			{ name = "zwart1", price = 500, amount = 50, },
+			{ name = "zwart2", price = 500, amount = 50, },
+			{ name = "please", price = 500, amount = 50, },
+			{ name = "sok", price = 500, amount = 50, },
+			{ name = "zak", price = 500, amount = 50, },
+			{ name = "groen", price = 500, amount = 50, },
+			{ name = "bandanab", price = 500, amount = 50, },
+			{ name = "bivak1", price = 500, amount = 50, },
+			{ name = "roodc", price = 500, amount = 150, },
+			{ name = "clown", price = 500, amount = 150, },
+			{ name = "gorilla", price = 500, amount = 50, },
+			{ name = "paard", price = 500, amount = 50, },
+			{ name = "paardu", price = 500, amount = 50, },
+			{ name = "skullr", price = 500, amount = 50, },
+			{ name = "masker3", price = 500, amount = 50, },
+			{ name = "helm1", price = 500, amount = 50, },
 		},
 		["weedshop"] = {
 			{ name = "joint", price = 10, amount = 1000, },
 			{ name = "weapon_poolcue", price = 100, amount = 1000, },
-			{ name = "weed_nutrition", price = 20, amount = 1000, },
 			{ name = "empty_weed_bag", price = 2, amount = 1000, },
 			{ name = "rolling_paper", price = 2, amount = 1000, },
+			{ name = "water", price = 5, amount = 10, },
+			{ name = "blottingpaper", price = 25, amount = 10, },
+			{ name = "shears", price = 250, amount = 5, },
 		},
 		["gearshop"] = {
 			{ name = "diving_gear", price = 2500, amount = 10, },
 			{ name = "jerry_can", price = 200, amount = 50, },
+			{ name = "fishingrod", price = 100, amount = 1000, },
+			{ name = "fishingbait", price = 2, amount = 1000, },
+			{ name = "skateboard", price = 250, amount = 1000, },
+			{ name = "spray", price = 200, amount = 10, },
+			{ name = "spray_remover", price = 100, amount = 10, },
+			{ name = "backpack_small", price = 750, amount = 5, },
+			{ name = "backpack_medium", price = 1250, amount = 10, },
+			{ name = "backpack_large", price = 2000, amount = 5, },
 		},
 		["leisureshop"] = {
 			{ name = "parachute", price = 2500, amount = 10, },
 			{ name = "binoculars", price = 50, amount = 50, },
 			{ name = "diving_gear", price = 2500, amount = 10, },
+			{ name = "diving_fill", price = 500, amount = 10, },
+			{ name = "syphoningkit", price = 2500, amount = 10, },
 		},
 		["weapons"] = {
-			{ name = "weapon_knife", price = 250, amount = 250, },
 			{ name = "weapon_bat", price = 250, amount = 250, },
-			{ name = "weapon_hatchet",price = 250, amount = 250,  requiredJob = { ["mechanic"] = 0, ["police"] = 0 } },
-			{ name = "weapon_pistol", price = 2500, amount = 5, requiresLicense = true },
-			{ name = "weapon_snspistol", price = 1500, amount = 5, requiresLicense = true },
-			{ name = "weapon_vintagepistol", price = 4000, amount = 5, requiresLicense = true },
-			{ name = "pistol_ammo", price = 250, amount = 250,  requiresLicense = true },
+			{ name = "weapon_hatchet",price = 250, amount = 250, },
 		},
 		["coffeeplace"] = {
 			{ name = "coffee", price = 5, amount = 500 },
@@ -120,7 +158,7 @@ Config = {
 			{ name = "snikkel_candy", price = 100, amount = 25, },
 		},
 		["blackmarket"] = {
-			{ name = "radioscanner", price = 850, amount = 5 },
+			{ name = "laptop", price = 7500, amount = 1 },
 		},
 	},
 }
@@ -354,62 +392,19 @@ Config.Locations = {
     },
 
     -- Local Store Locations
-    ["delvecchioliquor"] = {
-        ["label"] = "Del Vecchio Liquor",
+    ["masker"] = {
+        ["label"] = "Masquerade",
 		["type"] = "items",
 		["model"] = {
 			`cs_nervousron`,
 			`IG_RussianDrunk`,
-			`U_M_Y_MilitaryBum`,
-			`A_F_M_TrampBeac_01`,
-			`A_M_M_Tramp_01`,
+			`S_M_M_StrVend_01`,
 		},
-        ["coords"] = { vector4(-160.54, 6320.85, 31.59, 317.79), },
-        ["products"] = Config.Products["normal"],
-        ["blipsprite"] = 52,
+        ["coords"] = { vector4(-1262.78, -1424.2, 4.37, 128.39), },
+        ["products"] = Config.Products["masker"],
+        ["blipsprite"] = 84,
 		["blipcolour"] = 2,
     },
-	["digitalden"] = {
-		["label"] = "Digital Den",
-		["type"] = "items",
-		["model"] = {
-			`S_M_M_LifeInvad_01`,
-			`IG_Ramp_Hipster`,
-			`A_M_Y_Hipster_02`,
-			`A_F_Y_Hipster_01`,
-			`IG_LifeInvad_01`,
-			`IG_LifeInvad_02`,
-			`CS_LifeInvad_01`,
-		},
-		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/b/b5/DigitalDen-GTAV-Logo.png",
-		["coords"] = {
-			vector4(391.76, -832.79, 29.29, 223.77),
-			vector4(1136.99, -473.13, 66.53, 254.85),
-			vector4(-509.55, 278.63, 83.31, 176.65),
-			vector4(-656.27, -854.73, 24.5, 359.39),
-			vector4(-1088.29, -254.3, 37.76, 252.7),
-			},
-		["products"] = Config.Products["electronics"],
-		["blipsprite"] = 619,
-		["blipcolour"] = 7,
-	},
-	["lostmc"] = { -- More of a test/example - Gang accessible stores
-		["label"] = "Lost MC",
-		["type"] = "items",
-		["gang"] = "lostmc",
-		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/b/b6/LostMCPatch-GTAV-Worn.png",
-		["model"] = {
-			`G_F_Y_Lost_01`,
-			`G_M_Y_Lost_01`,
-			`G_M_Y_Lost_02`,
-			`G_M_Y_Lost_03`,
-		},
-		["coords"] = {
-			vector4(999.59, -131.58, 74.06, 12.95),
-		},
-		["products"] = Config.Products["coffeeplace"], -- example using coffeplace info
-		["hideblip"] = true,
-	},
 }
 
 --if Gabz locations are enabled, override their coords with these
@@ -457,11 +452,7 @@ if Config.BlackMarket then
 			`MP_M_Meth_01`,
 		},
 		["coords"] = {
-			vector4(776.24, 4184.08, 41.8, 92.12),
-			vector4(2482.51, 3722.28, 43.92, 39.98),
-			vector4(462.67, -1789.16, 28.59, 317.53),
-			vector4(-115.15, 6369.07, 31.52, 232.08),
-			vector4(752.52, -3198.33, 6.07, 301.72)
+			vector4(-401.35, 1052.25, 323.84, 31.37),
 		},
 		["products"] = Config.Products["blackmarket"],
 		["hideblip"] = true,
