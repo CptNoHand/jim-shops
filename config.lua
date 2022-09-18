@@ -67,7 +67,7 @@ Config = {
 			{ name = "firework4", price = 50, amount = 50, },
 			{ name = "fitbit", price = 400, amount = 150, },
 			{ name = "cleaningkit", price = 150, amount = 150, },
-			{ name = "amonia", price = 20, amount = 15, },
+			{ name = "ammonia", price = 20, amount = 15, },
 		},
 		["masker"] = {
 			{ name = "terror", price = 500, amount = 250, },
