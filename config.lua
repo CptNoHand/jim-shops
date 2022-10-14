@@ -60,6 +60,7 @@ Config = {
 			{ name = "screwdriverset", price = 350, amount = 50, },
 			{ name = "phone", price = 750, amount = 50, },
 			{ name = "radio", price = 2500, amount = 50, },
+			{ name = "ducttape", price = 50, amount = 50, },
 			{ name = "binoculars", price = 50, amount = 50, },
 			{ name = "firework1", price = 50, amount = 50, },
 			{ name = "firework2", price = 50, amount = 50, },
@@ -109,6 +110,7 @@ Config = {
 			{ name = "water", price = 5, amount = 10, },
 			{ name = "blottingpaper", price = 25, amount = 10, },
 			{ name = "shears", price = 250, amount = 5, },
+			{ name = "cagoule", price = 25, amount = 5, },
 		},
 		["gearshop"] = {
 			{ name = "diving_gear", price = 2500, amount = 10, },
@@ -310,7 +312,7 @@ Config.Locations = {
 			`S_M_Y_Casino_01`,
 		},
 		["coords"] = {
-			vector4(990.08, 30.35, 71.47, 94.81),
+			vector4(949.44, 32.62, 71.84, 75.57),
 			vector4(990.96, 31.8, 71.47, 19.59),
 		},
 		["products"] = Config.Products["casino"],
@@ -320,7 +322,7 @@ Config.Locations = {
 	},
     ["casino2"] = {
 		["label"] = "Casino Bar",
-		["coords"] = { vector4(979.44, 25.4, 71.46, 0.75), },
+		["coords"] = { vector4(938.03, 27.74, 71.83, 26.77), },
 		["type"] = "items",
 		["model"] = {
 			`S_M_M_HighSec_01`,
@@ -341,7 +343,7 @@ Config.Locations = {
 			`A_F_Y_RurMeth_01`,
 			`a_m_y_hippy_01`,
 		},
-		["coords"] = { vector4(-1173.12, -1572.71, 4.66, 123.56), },
+		["coords"] = { vector4(-1210.85, -1465.12, 4.37, 303.0), },
 		["products"] = Config.Products["weedshop"],
 		["blipsprite"] = 496,
 		["blipcolour"] = 2,
@@ -365,7 +367,7 @@ Config.Locations = {
 
     -- Sea Word Locations
     ["seaworld"] = {
-		["label"] = "Sea World",
+		["label"] = "Sea World Gear",
 		["type"] = "items",
 		["model"] = {
 			`mp_m_boatstaff_01`,
