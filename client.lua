@@ -46,7 +46,7 @@ CreateThread(function()
 				if not v["hideblip"] then
 					StoreBlip = AddBlipForCoord(b)
 					SetBlipSprite(StoreBlip, v["blipsprite"])
-					SetBlipScale(StoreBlip, 0.7)
+					SetBlipScale(StoreBlip, 0.6)
 					SetBlipDisplay(StoreBlip, 6)
 					SetBlipColour(StoreBlip, v["blipcolour"])
 					SetBlipAsShortRange(StoreBlip, true)

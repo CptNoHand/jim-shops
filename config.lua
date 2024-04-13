@@ -9,7 +9,7 @@ Config = {
 	img = "qb-inventory/html/images/", -- Set this to your inventory
 	JimMenu = true, -- Enable this if you are using an updated qb-menu resource with icon support
 	ApGov = true, -- Add support for AP-Goverment Tax 
-	Peds = true, -- Set to true if you want Shops to have Peds
+	Peds = false, -- Set to true if you want Shops to have Peds
 	Limit = true, -- Enable this to add Stash features, This adds limits to items and gets refilled at each restart
 	MaxSlots = 41, -- Set this to your player inventory slot count, this is default "41"
 	BlackMarket = true, -- enable to add blackmarket locations (defined at the bottom of this file)
@@ -21,9 +21,6 @@ Config = {
 
 	Scenarios = { -- List of scenarios the peds do, This is called "fun", much better than standing staring at the void.
 		"WORLD_HUMAN_GUARD_PATROL",
-		"WORLD_HUMAN_JANITOR",
-		"WORLD_HUMAN_MUSCLE_FLEX",
-		"WORLD_HUMAN_MUSCLE_FREE_WEIGHTS",
 		"PROP_HUMAN_STAND_IMPATIENT",
 		"WORLD_HUMAN_VALET",
 		"WORLD_HUMAN_AA_COFFEE",
@@ -42,11 +39,9 @@ Config = {
 			{ name = "beer", price = 7, amount = 50, },
 			{ name = "whiskey", price = 10, amount = 50, },
 			{ name = "vodka", price = 12, amount = 50, },
-			{ name = "bandage", price = 100, amount = 50, },
 			{ name = "lighter", price = 2, amount = 50, },
 			{ name = "rolling_paper", price = 2, amount = 5000,  },
-			{ name = "lotto", price = 250, amount = 50, },
-			{ name = "notepad", price = 100, amount = 5000,  },
+			{ name = "redwoodcigs", price = 50, amount = 50, info = { uses = 20 }, },
 		},
 		["bar"] = {
 			{ name = "water_bottle", price = 2, amount = 50, },
@@ -60,15 +55,8 @@ Config = {
 			{ name = "screwdriverset", price = 350, amount = 50, },
 			{ name = "phone", price = 750, amount = 50, },
 			{ name = "radio", price = 2500, amount = 50, },
-			{ name = "ducttape", price = 50, amount = 50, },
-			{ name = "binoculars", price = 50, amount = 50, },
-			{ name = "firework1", price = 50, amount = 50, },
-			{ name = "firework2", price = 50, amount = 50, },
-			{ name = "firework3", price = 50, amount = 50, },
-			{ name = "firework4", price = 50, amount = 50, },
-			{ name = "fitbit", price = 400, amount = 150, },
-			{ name = "cleaningkit", price = 150, amount = 150, },
 			{ name = "ammonia", price = 20, amount = 15, },
+			{ name = "rope", price = 20, amount = 15, },
 		},
 		["masker"] = {
 			{ name = "terror", price = 500, amount = 250, },
@@ -103,14 +91,13 @@ Config = {
 			{ name = "helm1", price = 500, amount = 50, },
 		},
 		["weedshop"] = {
-			{ name = "joint", price = 10, amount = 1000, },
-			{ name = "weapon_poolcue", price = 100, amount = 1000, },
-			{ name = "empty_weed_bag", price = 2, amount = 1000, },
-			{ name = "rolling_paper", price = 2, amount = 1000, },
-			{ name = "water", price = 5, amount = 10, },
-			{ name = "blottingpaper", price = 25, amount = 10, },
+			{ name = "weapon_poolcue", price = 100, amount = 10, },
+			{ name = "empty_weed_bag", price = 1, amount = 1500, },
+			{ name = "rolling_paper", price = 1, amount = 1500, },
+			{ name = "water", price = 1, amount = 1500, },
+			{ name = "blottingpaper", price = 2, amount = 1500, },
 			{ name = "shears", price = 250, amount = 5, },
-			{ name = "cagoule", price = 25, amount = 5, },
+			{ name = "cagoule", price = 25, amount = 1500, },
 		},
 		["gearshop"] = {
 			{ name = "diving_gear", price = 2500, amount = 10, },
@@ -123,6 +110,7 @@ Config = {
 			{ name = "backpack_small", price = 750, amount = 5, },
 			{ name = "backpack_medium", price = 1250, amount = 10, },
 			{ name = "backpack_large", price = 2000, amount = 5, },
+			{ name = "kq_outfitbag", price = 2000, amount = 5, },
 		},
 		["leisureshop"] = {
 			{ name = "parachute", price = 2500, amount = 10, },
@@ -135,19 +123,32 @@ Config = {
 			{ name = "weapon_bat", price = 250, amount = 250, },
 			{ name = "weapon_hatchet",price = 250, amount = 250, },
 		},
+		["pills"] = {
+			{ name = "painkillers", price = 100, amount = 250, },
+		},
+		["digitalden"] = {
+			{ name = "classic_phone", price = 850, amount = 10, },
+			{ name = "mp3", price = 250, amount = 10, },
+			{ name = "fitbit", price = 500, amount = 10, },
+			{ name = "radio", price = 2000, amount = 10, },
+			{ name = "black_phone", price = 850, amount = 10, },
+			{ name = "blue_phone", price = 850, amount = 10, },
+			{ name = "gold_phone", price = 850, amount = 10, },
+			{ name = "red_phone", price = 850, amount = 10, },
+			{ name = "green_phone", price = 850, amount = 10, },
+			{ name = "greenlight_phone", price = 850, amount = 10, },
+			{ name = "pink_phone", price = 850, amount = 10, },
+			{ name = "white_phone", price = 850, amount = 10, },
+			{ name = "sim_card", price = 99, amount = 10, },
+			{ name = "phone_module", price = 200, amount = 10, },
+		},
 		["coffeeplace"] = {
 			{ name = "coffee", price = 5, amount = 500 },
 			{ name = "lighter", price = 2, amount = 50 },
 		},
-		["casino"] = {
-			{ name = 'casinochips', price = 1, amount = 999999 },
-		},
 		["electronics"] = {
-			{ name = "phone", price = 850, amount = 50 },
-			{ name = "radio", price = 250, amount = 50, },
 			{ name = "screwdriverset", price = 350, amount = 50, },
 			{ name = "binoculars", price = 50, amount = 50, },
-			{ name = "fitbit", price = 400, amount = 150, },
 		},
 		["vending"] = {
 			{ name = "water_bottle", price = 100, amount = 25, },
@@ -297,38 +298,22 @@ Config.Locations = {
 			vector4(-1304.44, -395.68, 36.7, 41.85),
 		},
         ["products"] = Config.Products["weapons"],
-        ["blipsprite"] = 567,
-		["blipcolour"] = 1,
-    },
-    -- Casino Locations
-	["casino"] = {
-		["label"] = "Diamond Casino",
-		["targetLabel"] = "Buy Chips",
-		["type"] = "items",
-		["model"] = {
-			`U_F_M_CasinoShop_01`,
-			`U_F_M_CasinoCash_01`,
-			`S_F_Y_Casino_01`,
-			`S_M_Y_Casino_01`,
-		},
-		["coords"] = {
-			vector4(949.44, 32.62, 71.84, 75.57),
-			vector4(990.96, 31.8, 71.47, 19.59),
-		},
-		["products"] = Config.Products["casino"],
 		["hideblip"] = true,
-		["blipsprite"] = 617,
-		["blipcolour"] = 0,
-	},
-    ["casino2"] = {
-		["label"] = "Casino Bar",
-		["coords"] = { vector4(938.03, 27.74, 71.83, 26.77), },
+    },
+	 -- Police Locations
+	["police"] = {
+		["label"] = "Kitchen",
+		["targetLabel"] = "Kaufe Nahrung&Getränke",
 		["type"] = "items",
 		["model"] = {
 			`S_M_M_HighSec_01`,
 		},
-		["products"] = Config.Products["bar"],
-		["blipsprite"] = 52,
+		["coords"] = {
+			vector4(463.06, -982.67, 30.69, 45.07),
+		},
+		["products"] = Config.Products["normal"],
+		["hideblip"] = true,
+		["blipsprite"] = 617,
 		["blipcolour"] = 0,
 	},
 
@@ -345,8 +330,7 @@ Config.Locations = {
 		},
 		["coords"] = { vector4(-1210.85, -1465.12, 4.37, 303.0), },
 		["products"] = Config.Products["weedshop"],
-		["blipsprite"] = 496,
-		["blipcolour"] = 2,
+		["hideblip"] = true,
 	},
 
     -- Bean Coffee Locations
@@ -361,11 +345,24 @@ Config.Locations = {
 			vector4(126.55, -1028.12, 29.36, 343.0),
 		},
 		["products"] = Config.Products["coffeeplace"],
-		["blipsprite"] = 52,
-		["blipcolour"] = 31,
+		["hideblip"] = true,
     },
 
-    -- Sea Word Locations
+	-- Digital Den Locations
+    ["digitalden"] = {
+		["label"] = "Digital Den",
+		["type"] = "items",
+		["model"] = {
+			`A_F_Y_Hipster_02`,
+		},
+		["coords"] = {
+			vector4(-1232.12, -1439.73, 4.37, 217.03),
+		},
+		["products"] = Config.Products["digitalden"],
+		["hideblip"] = true,
+    },
+
+    -- Sea Word Locations digitalden
     ["seaworld"] = {
 		["label"] = "Sea World Gear",
 		["type"] = "items",
@@ -393,6 +390,19 @@ Config.Locations = {
 		["blipcolour"] = 2,
     },
 
+	-- Leisure Shop Locations
+    ["pills"] = {
+		["label"] = "Apotheke",
+		["type"] = "items",
+		["model"] = {
+			`mp_m_boatstaff_01`,
+			`a_m_y_beach_01`,
+		},
+		["coords"] = { vector4(-1830.39, -381.07, 49.4, 45.02) },
+		["products"] = Config.Products["pills"],
+		["hideblip"] = true,
+    },
+
     -- Local Store Locations
     ["masker"] = {
         ["label"] = "Masquerade",
@@ -404,8 +414,7 @@ Config.Locations = {
 		},
         ["coords"] = { vector4(-1262.78, -1424.2, 4.37, 128.39), },
         ["products"] = Config.Products["masker"],
-        ["blipsprite"] = 84,
-		["blipcolour"] = 2,
+        ["hideblip"] = true,
     },
 }
 
