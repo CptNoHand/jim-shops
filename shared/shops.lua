@@ -170,7 +170,7 @@ Locations = {
 			`A_F_Y_RurMeth_01`,
 			`a_m_y_hippy_01`,
 		},
-		["coords"] = { vec4(-1173.12, -1572.71, 4.66, 123.56), },
+		["coords"] = { vec4(-1210.85, -1465.12, 4.37, 303.0), },
 		["products"] = Products["weedshop"],
 		["blipsprite"] = 496,
 		["blipcolour"] = 2,
@@ -250,32 +250,11 @@ Locations = {
 		},
 		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/b/b5/DigitalDen-GTAV-Logo.png",
 		["coords"] = {
-			vec4(391.76, -832.79, 29.29, 223.77),
-			vec4(1136.99, -473.13, 66.53, 254.85),
-			vec4(-509.55, 278.63, 83.31, 176.65),
-			vec4(-656.27, -854.73, 24.5, 359.39),
-			vec4(-1088.29, -254.3, 37.76, 252.7),
+			vec4(-1232.12, -1439.73, 4.37, 217.03)
 			},
 		["products"] = Products["electronics"],
 		["blipsprite"] = 619,
 		["blipcolour"] = 7,
-	},
-	["lostmc"] = { -- More of a test/example - Gang accessible stores
-		["label"] = "Lost MC",
-		["type"] = "items",
-		["gang"] = "lostmc",
-		["logo"] = "https://static.wikia.nocookie.net/gtawiki/images/b/b6/LostMCPatch-GTAV-Worn.png",
-		["model"] = {
-			`G_F_Y_Lost_01`,
-			`G_M_Y_Lost_01`,
-			`G_M_Y_Lost_02`,
-			`G_M_Y_Lost_03`,
-		},
-		["coords"] = {
-			vec4(999.59, -131.58, 74.06, 12.95),
-		},
-		["products"] = Products["coffeeplace"], -- example using coffeplace info
-		["hideblip"] = true,
 	},
 }
 
